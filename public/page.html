@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">📚 Simple Wiki</a>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-box" placeholder="Search pages..." />
+                <a href="/page/new-page" class="btn btn-primary">+ New Page</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="page-header">
+                <h1 class="page-title" id="pageTitle">Loading...</h1>
+                <div class="page-actions">
+                    <button id="editBtn" class="btn btn-secondary">Edit</button>
+                    <button id="deleteBtn" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            
+            <div id="pageContent" class="wiki-content">
+                <div class="loading">Loading page content...</div>
+            </div>
+
+            <div id="editorContainer" class="editor-container" style="display: none;">
+                <div class="form-group">
+                    <label for="pageEditor" class="form-label">Page Content (Markdown)</label>
+                    <textarea id="pageEditor" class="editor" placeholder="Enter your page content using Markdown syntax..."></textarea>
+                </div>
+                <div class="page-actions">
+                    <button id="saveBtn" class="btn btn-success">Save Page</button>
+                    <button id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+
+            <div id="message" style="display: none;"></div>
+        </div>
+
+        <div id="searchResults" class="search-results" style="display: none;"></div>
+    </div>
+
+    <script src="page.js"></script>
+</body>
+</html>
