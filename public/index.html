@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">📚 Simple Wiki</a>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-box" placeholder="Search pages..." />
+                <a href="/page/new-page" class="btn btn-primary">+ New Page</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Welcome to Your Wiki</h1>
+            </div>
+            
+            <div class="wiki-content">
+                <p>This is your personal wiki where you can create and organize knowledge. Use the search box above to find pages or create new ones.</p>
+                
+                <h2>Getting Started</h2>
+                <ul>
+                    <li>Click "New Page" to create your first wiki page</li>
+                    <li>Use Markdown syntax for formatting your content</li>
+                    <li>Search through all your pages using the search box</li>
+                    <li>Edit any page by clicking the "Edit" button</li>
+                </ul>
+
+                <h2>Markdown Syntax</h2>
+                <p>You can use standard Markdown syntax to format your pages:</p>
+                <ul>
+                    <li><code># Heading 1</code> for main headings</li>
+                    <li><code>## Heading 2</code> for sub headings</li>
+                    <li><code>**bold text**</code> for bold text</li>
+                    <li><code>*italic text*</code> for italic text</li>
+                    <li><code>[link text](url)</code> for links</li>
+                    <li><code>- item</code> for bullet lists</li>
+                    <li><code>1. item</code> for numbered lists</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="searchResults" class="search-results" style="display: none;"></div>
+
+        <div class="main-content">
+            <h2>All Pages</h2>
+            <div id="pageList" class="page-list">
+                <div class="loading">Loading pages...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

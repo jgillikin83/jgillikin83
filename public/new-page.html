@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Page - Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">📚 Simple Wiki</a>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-box" placeholder="Search pages..." />
+                <a href="/" class="btn btn-secondary">← Home</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Create New Page</h1>
+            </div>
+            
+            <form id="newPageForm">
+                <div class="form-group">
+                    <label for="pageName" class="form-label">Page Name</label>
+                    <input type="text" id="pageName" class="form-input" placeholder="Enter page name..." required />
+                    <small style="color: #666; font-size: 0.9rem;">Only letters, numbers, hyphens, and underscores are allowed</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="pageContent" class="form-label">Page Content (Markdown)</label>
+                    <textarea id="pageContent" class="editor" placeholder="Enter your page content using Markdown syntax..." required></textarea>
+                </div>
+
+                <div class="page-actions">
+                    <button type="submit" class="btn btn-success">Create Page</button>
+                    <a href="/" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+
+            <div id="message" style="display: none;"></div>
+        </div>
+
+        <div id="searchResults" class="search-results" style="display: none;"></div>
+
+        <div class="main-content">
+            <h2>Markdown Syntax Help</h2>
+            <div class="wiki-content">
+                <p>You can use the following Markdown syntax to format your page:</p>
+                <ul>
+                    <li><code># Main Heading</code> - Creates a large heading</li>
+                    <li><code>## Sub Heading</code> - Creates a smaller heading</li>
+                    <li><code>**bold text**</code> - Makes text <strong>bold</strong></li>
+                    <li><code>*italic text*</code> - Makes text <em>italic</em></li>
+                    <li><code>[Link Text](http://example.com)</code> - Creates a link</li>
+                    <li><code>- List item</code> - Creates a bullet point</li>
+                    <li><code>1. Numbered item</code> - Creates a numbered list</li>
+                    <li><code>`code`</code> - Formats text as code</li>
+                    <li><code>&gt; Quote</code> - Creates a blockquote</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="new-page.js"></script>
+</body>
+</html>
